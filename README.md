@@ -12,6 +12,9 @@ conda create -n PAA python=3.7
 pip install -r requirements.txt
 ```
 
+下载官方的权重：https://drive.google.com/file/d/1i8i38lCkItS7H2gYN20Om_OyNJeAupoC/view?usp=sharing
+，将下载后的文件置于./official_PAA路径下。 
+
 ## 使用方法
 
 安装完环境后，直接运行`python compare.py`。
