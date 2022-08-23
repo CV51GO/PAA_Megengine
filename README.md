@@ -26,18 +26,8 @@ pip install -r requirements.txt
 
 ## 模型加载示例
 
-在paa.py中，定义了```get_megengine_hardnet_model```方法，该方法能够利用hub加载模型。
+在使用模型时，使用如下代码即可得到加载了权重的模型：
 ```python
-@hub.pretrained(
-"https://studio.brainpp.com/api/v1/activities/3/missions/55/files/044e5766-6db9-4d7c-8f80-b3f30ff8b211"
-)
-def get_megengine_hardnet_model():
-    model_megengine = PAA()
-    return model_megengine
-```
-
-在使用模型时，使用如下代码即可加载权重：
-```python
-from paa import get_megengine_hardnet_model
-megengine_model = get_megengine_hardnet_model(pretrained=True)
+import megengine.hub as hub
+megengine_model = hub.load('CV51GO/PAA_Megengine','get_megengine_hardnet_model',pretrained=True)
 ```
